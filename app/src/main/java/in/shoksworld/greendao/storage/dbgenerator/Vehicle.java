@@ -8,7 +8,7 @@ import org.greenrobot.greendao.annotation.*;
  * Entity mapped to table "VEHICLE".
  */
 @Entity
-public class VEHICLE {
+public class Vehicle {
 
     @Id
     private Long id;
@@ -17,15 +17,15 @@ public class VEHICLE {
     private Integer price;
 
     @Generated
-    public VEHICLE() {
+    public Vehicle() {
     }
 
-    public VEHICLE(Long id) {
+    public Vehicle(Long id) {
         this.id = id;
     }
 
     @Generated
-    public VEHICLE(Long id, String vehicleName, String vehicleType, Integer price) {
+    public Vehicle(Long id, String vehicleName, String vehicleType, Integer price) {
         this.id = id;
         this.vehicleName = vehicleName;
         this.vehicleType = vehicleType;

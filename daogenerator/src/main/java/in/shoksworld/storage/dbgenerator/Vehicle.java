@@ -8,7 +8,7 @@ import org.greenrobot.greendao.generator.Schema;
  */
 
 public class Vehicle {
-    private String ENTITY_VEHICLE = "VEHICLE";
+    private String ENTITY_VEHICLE = "Vehicle";
     private String VEHICLE_NAME = "vehicleName";
     private String VEHICLE_TYPE = "vehicleType";
     private String PRICE = "price";

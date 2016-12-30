@@ -5,6 +5,7 @@ import android.database.sqlite.SQLiteDatabase;
 
 import in.shoksworld.greendao.storage.dbgenerator.DaoMaster;
 import in.shoksworld.greendao.storage.dbgenerator.DaoSession;
+import in.shoksworld.greendao.storage.dbgenerator.DbHelper;
 
 /**
  * Application Class
@@ -13,6 +14,7 @@ import in.shoksworld.greendao.storage.dbgenerator.DaoSession;
 public class GreenDao extends Application {
     static GreenDao applicationInstance;
     public DaoSession daoSession;
+    public DbHelper dbHelper;
     public String databaseName = "greendaodemo-database";
 
     @Override
@@ -38,5 +40,12 @@ public class GreenDao extends Application {
             this.daoSession = daoMaster.newSession();
         }
         return daoSession;
+    }
+
+    public DbHelper getDbHelper() {
+        if (dbHelper == null) {
+            dbHelper = new DbHelper();
+        }
+        return dbHelper;
     }
 }

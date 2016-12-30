@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">GreenDao</string>
+    <string name="get_all_vehicles_text">Get All Vehicles </string>
+    <string name="add_vehicle_text">Add Vehicle</string>
+    <string name="vehicle_name_hint">Vehicle Name</string>
+    <string name="vehicle_type_hint">Vehicle Type</string>
+    <string name="vehicle_cost_hint">Cost</string>
+    <string name="submit_text">Submit</string>
 </resources>

@@ -13,12 +13,12 @@ import org.greenrobot.greendao.database.DatabaseStatement;
 /** 
  * DAO for table "VEHICLE".
 */
-public class VEHICLEDao extends AbstractDao<VEHICLE, Long> {
+public class VehicleDao extends AbstractDao<Vehicle, Long> {
 
     public static final String TABLENAME = "VEHICLE";
 
     /**
-     * Properties of entity VEHICLE.<br/>
+     * Properties of entity Vehicle.<br/>
      * Can be used for QueryBuilder and for referencing column names.
      */
     public static class Properties {
@@ -29,11 +29,11 @@ public class VEHICLEDao extends AbstractDao<VEHICLE, Long> {
     }
 
 
-    public VEHICLEDao(DaoConfig config) {
+    public VehicleDao(DaoConfig config) {
         super(config);
     }
     
-    public VEHICLEDao(DaoConfig config, DaoSession daoSession) {
+    public VehicleDao(DaoConfig config, DaoSession daoSession) {
         super(config, daoSession);
     }
 
@@ -54,7 +54,7 @@ public class VEHICLEDao extends AbstractDao<VEHICLE, Long> {
     }
 
     @Override
-    protected final void bindValues(DatabaseStatement stmt, VEHICLE entity) {
+    protected final void bindValues(DatabaseStatement stmt, Vehicle entity) {
         stmt.clearBindings();
  
         Long id = entity.getId();
@@ -79,7 +79,7 @@ public class VEHICLEDao extends AbstractDao<VEHICLE, Long> {
     }
 
     @Override
-    protected final void bindValues(SQLiteStatement stmt, VEHICLE entity) {
+    protected final void bindValues(SQLiteStatement stmt, Vehicle entity) {
         stmt.clearBindings();
  
         Long id = entity.getId();
@@ -109,8 +109,8 @@ public class VEHICLEDao extends AbstractDao<VEHICLE, Long> {
     }    
 
     @Override
-    public VEHICLE readEntity(Cursor cursor, int offset) {
-        VEHICLE entity = new VEHICLE( //
+    public Vehicle readEntity(Cursor cursor, int offset) {
+        Vehicle entity = new Vehicle( //
             cursor.isNull(offset + 0) ? null : cursor.getLong(offset + 0), // id
             cursor.isNull(offset + 1) ? null : cursor.getString(offset + 1), // vehicleName
             cursor.isNull(offset + 2) ? null : cursor.getString(offset + 2), // vehicleType
@@ -120,7 +120,7 @@ public class VEHICLEDao extends AbstractDao<VEHICLE, Long> {
     }
      
     @Override
-    public void readEntity(Cursor cursor, VEHICLE entity, int offset) {
+    public void readEntity(Cursor cursor, Vehicle entity, int offset) {
         entity.setId(cursor.isNull(offset + 0) ? null : cursor.getLong(offset + 0));
         entity.setVehicleName(cursor.isNull(offset + 1) ? null : cursor.getString(offset + 1));
         entity.setVehicleType(cursor.isNull(offset + 2) ? null : cursor.getString(offset + 2));
@@ -128,13 +128,13 @@ public class VEHICLEDao extends AbstractDao<VEHICLE, Long> {
      }
     
     @Override
-    protected final Long updateKeyAfterInsert(VEHICLE entity, long rowId) {
+    protected final Long updateKeyAfterInsert(Vehicle entity, long rowId) {
         entity.setId(rowId);
         return rowId;
     }
     
     @Override
-    public Long getKey(VEHICLE entity) {
+    public Long getKey(Vehicle entity) {
         if(entity != null) {
             return entity.getId();
         } else {
@@ -143,7 +143,7 @@ public class VEHICLEDao extends AbstractDao<VEHICLE, Long> {
     }
 
     @Override
-    public boolean hasKey(VEHICLE entity) {
+    public boolean hasKey(Vehicle entity) {
         return entity.getId() != null;
     }
 
