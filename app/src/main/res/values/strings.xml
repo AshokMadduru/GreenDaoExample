@@ -2,8 +2,14 @@
     <string name="app_name">GreenDao</string>
     <string name="get_all_vehicles_text">Get All Vehicles </string>
     <string name="add_vehicle_text">Add Vehicle</string>
+    <string name="update_vehicle_text">Update Vehicle</string>
     <string name="vehicle_name_hint">Vehicle Name</string>
     <string name="vehicle_type_hint">Vehicle Type</string>
     <string name="vehicle_cost_hint">Cost</string>
     <string name="submit_text">Submit</string>
+    <string name="fields_mandatory_text">All fields are mandatory</string>
+    <string name="vehicle_added_message">Vehicle added</string>
+    <string name="vehicle_addition_failed">Vehicle addition failed. Try again.</string>
+    <string name="vehicle_update_failed">Vehicle update failed. Try again.</string>
+    <string name="vehicle_updated_message">Vehicle updated.</string>
 </resources>

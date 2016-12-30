@@ -5,7 +5,7 @@ import android.database.sqlite.SQLiteDatabase;
 
 import in.shoksworld.greendao.storage.dbgenerator.DaoMaster;
 import in.shoksworld.greendao.storage.dbgenerator.DaoSession;
-import in.shoksworld.greendao.storage.dbgenerator.DbHelper;
+import in.shoksworld.greendao.storage.DbHelper;
 
 /**
  * Application Class
